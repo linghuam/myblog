@@ -15,6 +15,7 @@ tags:
 * [高级教程-Pro Git](http://git.oschina.net/progit/)
 * [官网-GitBook](https://git-scm.com/book/zh/v2)
 
+<!--more-->
 
 ## git常用命令
 

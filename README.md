@@ -13,3 +13,6 @@ $ hexo new [layout] <title>
 $ hexo g -d
 $ hexo d -g
 ```
+
+## ISSUE
+文章加 ```<!--more-->``` 是截取摘要部分
