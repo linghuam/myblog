@@ -1,7 +1,9 @@
 ---
 title: test1
 date: 2017-12-22 14:10:06
-tags: 
+categories:
+- tool
+tags:
 - test1
 ---
 

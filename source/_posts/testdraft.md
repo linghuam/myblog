@@ -1,8 +1,11 @@
 ---
 title: testdraft
+date: 2017-12-22 14:22:57
+excerpt: true
+categories:
+- git
 tags:
 - testdraft
-date: 2017-12-22 14:22:57
 ---
 
 

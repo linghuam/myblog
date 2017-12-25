@@ -1,6 +1,8 @@
 ---
 title: testdraft
 comments: true
+categories:
+- mobile
 tags:
 - testdraft
 date: 2017-12-25 09:46:17
