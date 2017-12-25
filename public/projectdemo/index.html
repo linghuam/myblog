@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: test1 | My Blog Space</title>
+  <title>projectdemo | My Blog Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="My Blog Space">
-<meta property="og:url" content="http://linghuam.github.io/tags/test1/index.html">
+  <meta name="description" content="项目展示">
+<meta property="og:type" content="website">
+<meta property="og:title" content="projectdemo">
+<meta property="og:url" content="http://linghuam.github.io/projectdemo/index.html">
 <meta property="og:site_name" content="My Blog Space">
+<meta property="og:description" content="项目展示">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-25T04:14:09.327Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My Blog Space">
+<meta name="twitter:title" content="projectdemo">
+<meta name="twitter:description" content="项目展示">
   
     <link rel="alternate" href="/atom.xml" title="My Blog Space" type="application/atom+xml">
   
@@ -66,40 +70,99 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-         <span class="archive-year-post">6 post  this year</span>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/22/test1/" class="archive-article-date">
-  <time datetime="2017-12-22T06:10:06.000Z" itemprop="datePublished">12-22</time>
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/projectdemo/index.html" class="article-date">
+  <time datetime="2017-12-25T04:13:45.000Z" itemprop="datePublished">2017-12-25</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/22/test1/">test1</a>
+    <h1 class="article-title" itemprop="name">
+      projectdemo
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a>项目展示</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://linghuam.github.io/projectdemo/index.html" data-id="cjblthx2t0001qst3p637x08t" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
   </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+  
 </article>
-  
-  
-    </div></section>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
   
 
 </section>
@@ -110,49 +173,24 @@
 
   
     
-  
+    <div class="widget-wrap">
     
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title tagcloud">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/test1/" style="font-size: 14px; color: #00f">test1</a> <a href="/tags/test2/" style="font-size: 14px; color: #00f">test2</a> <a href="/tags/test3/" style="font-size: 14px; color: #00f">test3</a> <a href="/tags/testdraft/" style="font-size: 25px; color: #ee82ee">testdraft</a>
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#项目展示"><span class="toc-number">1.</span> <span class="toc-text">项目展示</span></a></li></ol>
+          </div>
+      </div>
     </div>
-  </div>
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/12/25/testdraft-1/">testdraft</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/22/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/22/test3/">test3</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/22/test2/">test2</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/22/testdraft/">testdraft</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
+  
+    
+  
+    
   
     
 
