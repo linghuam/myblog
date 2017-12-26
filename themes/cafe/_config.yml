@@ -40,7 +40,7 @@ content_position: widget
 content_display_fixed: true
 
 # 文章底部推荐文章数,false关闭
-random_posts: 5
+random_posts: 3
 
 widgets:
 - social
