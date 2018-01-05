@@ -29,8 +29,14 @@ wechat_url: https://linghuam.github.io/about/index/weixin.jpg ## 启用wechat wi
 
 # Friendly links 友情链接
 links:
-  giscafer's blog: http://blog.giscafer.com
-  GIS520社区: http://www.gis520.com
+  百度FEX: http://fex.baidu.com/
+  淘宝FED: http://taobaofed.org/
+  阿里巴巴国际UED: http://www.aliued.com/
+  腾讯AlloyTeam: http://www.alloyteam.com/
+  w3cPlus: https://www.w3cplus.com/
+  阮一峰的网络日志: http://www.ruanyifeng.com/blog/
+  MDN: https://developer.mozilla.org/en-US/
+  AntV: https://antv.alipay.com/zh-cn/vis/blog/index.html
 
 # 侧边栏 Sidebar，目前仅支持right
 sidebar: right
@@ -49,6 +55,7 @@ widgets:
 - tagcloud
 - recent_posts
 - archive
+- friendly_link
 - wechat
 
 # 提供以下内置组件
@@ -91,7 +98,7 @@ mathjax:
 
 # 其他参数
 google_analytics:
-favicon: /favicon.png
+favicon: /favicon.ico
 
 
 # comments 评论插件
