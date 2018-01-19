@@ -1,7 +1,7 @@
 # 头部导航 Header
 menu:
   首页: /
-  项目展示: /projectdemo
+  项目展示: https://linghuam.github.io/project-gallery/dist/#/
   归档: /archives
   关于: /about
 rss: /atom.xml
