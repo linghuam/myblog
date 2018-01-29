@@ -1,9 +1,10 @@
 <% if (theme.mathjax.enable) {%>
-  <% if (!theme.mathjax.per_page || (page.total || page.mathjax)) {%>
+  <% if (theme.mathjax.per_page || (!theme.mathjax.per_page && (page.total || page.mathjax))) {%>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ["$$","$$"] ], //段内公式选择$$
           processEscapes: true,
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         }
