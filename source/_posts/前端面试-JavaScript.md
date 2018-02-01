@@ -80,6 +80,13 @@ js通过**事件循环**和**消息队列**来执行异步操作的。
 
 js只有一个线程，成为主线程，只有当主线程执行完成后才会将异步操作放到主线程继续执行。
 
+js中常用的异步有：
+- 回调函数
+- 事件监听
+- 发布/订阅
+- promise
+- generator（ES6）
+- async/await(ES7)
 
 ### JS继承的实现方式?
 - 构造函数继承、原型继承、拷贝继承、组合继承...
@@ -449,6 +456,18 @@ NaN === NaN;// false
 用`*`号声明，函数内用 `yield` 关键字。
 
 每调用一次next，则执行一次yield语句。
+
+```js
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+var g = gen(); // "Generator { }"
+g.next(); // {value:1,done:false}
+g.next(); // {value:2,done:false}
+```
 
 ### es6-fetch?
 
