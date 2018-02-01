@@ -289,6 +289,7 @@ var arr2 = Array(7);
 - arr.pop()：移除数组最后一个元素，并返回该元素
 - arr.unshift(element1,element2,...)：往数组**头部**添加元素，返回数组的新长度
 - arr.shift()：移除数组头部第一个元素，并返回该元素
+- arr.reverse()：将数组倒转，返回新数组，改变原数组
 - arr.sort([compareFunction])：对数组排序，并返回排序后的数组，原数组也被改变。
 
   compareFunction 用于指定排序规则，不指定则默认按 Unicode（字符串） 顺序。
@@ -334,7 +335,6 @@ arr.map((x) => x*2);
 }, 0);
 ```
 - arr.reduceRight(callback[,initialValue]): arr.reduce 的逆操作
-- arr.reverse()：将数组倒转，返回新数组，不改变原数组
 
 **判断：**
 - Array.isArray(obj)：判断是否是数组，返回 true 或 false
