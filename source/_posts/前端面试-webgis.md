@@ -35,5 +35,13 @@ https://www.jianshu.com/p/b5dbdbd5cd8c
 http://blog.csdn.net/yht_roy/article/details/39346235
 
 ### 插值算法实现原理？
-http://www.cnblogs.com/naaoveGIS/p/6142226.html
-https://en.wikipedia.org/wiki/Bilinear_interpolation
+- 已知条件：一系列离散点；要插的值序列，如：[3,5,7,9]
+- 网格化。采用 IDW 算法将离散点网格化。
+- 取一个待插值数 p0，将每个网格的顶点数值与之相减，结果大于零则标记为'+'，结果小于零则标记为'-'
+- 这样就得到一个顶点要么是正，要么是负的网格。
+- 逐一的处理每个网格，取网格各个边的中点，然后找到将正负分开的连线将中点相连接
+- 重复上诉过程，插另一个值
+
+http://blog.csdn.net/silangquan/article/details/47054309
+
+https://en.wikipedia.org/wiki/Marching_squares
