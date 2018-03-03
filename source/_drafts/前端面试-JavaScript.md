@@ -13,7 +13,7 @@ categories:
 
 ### JavaScript 数据类型分哪些？
 
-**基本类型：** Number、String、Boolean、Undefined、Null、Object
+**基本类型：** Number、String、Boolean、Undefined、Null、Symbol(ES6)、Object
 
 **派生类型：** Function、Array、Map、Set
 
@@ -25,7 +25,7 @@ Date、Array、Math、Number、Boolean、String、RegExp、Function、Map、Set�
 
 ### typeof 操作符结果？
 
-**可能的值：**"undefined" | "boolean" | "string" | "number" | "object" | "function" | "symbol"
+**可能的值：** "undefined" | "boolean" | "string" | "number" | "object" | "function" | "symbol"
 
 ```js
   typeof null === 'object'；
@@ -60,33 +60,49 @@ js创建(new)对象时，将 `person.__proto__ = Person.prototype`。
 
 ### 闭包及常用的场景、作用域、单例模式?
 
-局部变量不能共享和长久保存，全局变量会造成全局污染，而闭包避免了这两个问题。
+* 背景
+ - 局部变量不能共享和长久保存，全局变量会造成全局污染，而闭包避免了这两个问题。
+ - js 作用域是函数作用域。
+ - 闭包就是一个函数引用另外一个函数的变量。
 
-js 作用域是函数作用域。
 
-闭包就是一个函数引用另外一个函数的变量。
+* 使用场景 http://blog.csdn.net/yanghua_kobe/article/details/6780181
+ - setTimeout 调用。setTimeout 的第一个参数为函数，如果要向这个函数传参数，可以定义一个有参数函数并
+ 返回一个无参函数。
+ - 将函数关联到对象的实例方法，一个 javascript 对象被封装用来参与一个特定 DOM 元素的交互，将对象和方法名作为
+ 参数传递给一个函数，它返回一个函数，在这个函数内部执行并返回对象的该方法，其实就是事件绑定。
+ - 封装相关的功能集，多个函数共享一个变量，为了避免全局污染，可用闭包声明一个自执行函数。
 
-当多个方法共享一个变量时，可用闭包实现；
 
-在面向对象中，可用闭包实现私有变量；
-
+* 注意事项
 因为变量被引用，所以不会被垃圾回收，闭包占用内存、消耗性能，使用要小心。
 
 ### js 异步的理解？
 
-js是单线程的。
+js异步编程的4种方法：http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html
+
+js异步的理解：http://blog.csdn.net/ebay/article/details/50952294
+
+
+js运行是采用单线程的。决定JavaScript 是否多线程执⾏行是Runtime。JavaScript 的Runtime 有如chrome 中V8、Node.js 等。
+
+为什么会单线程执行，有些理由还是很有道理的：设计GUI 框架，多线程的方式抢占资源是很容易造成死锁的，特别是在操作DOM 上，如果两个线程同时执行，一个执行删除元素，一个执行添加元素，页面就会造成混乱，作为和人直接接触的图形界面，如果出现这种现象，基本上就算是反常识了。
+
+JavaScript 的 Runtime 将不耗时的计算指令在指定的一个主线程中不间断执行，其它耗时的任务，Runtime 会利用回调交给浏览器，由浏览器另行开辟线程来执行，最后将结果集返回给主线程就可以了。
 
 js通过**事件循环**和**消息队列**来执行异步操作的。
 
-js只有一个线程，成为主线程，只有当主线程执行完成后才会将异步操作放到主线程继续执行。
-
 js中常用的异步有：
-- 回调函数
-- 事件监听
-- 发布/订阅
+- 凡是带有回调函数作为参数的 API 都是异步的，如 DOM事件、 setTimeOut、Ajax请求等
+- 发布/订阅模式
 - promise
 - generator（ES6）
 - async/await(ES7)
+
+**回调和异步不等价**，没有回调，JavaScript 仍然可以是异步，有回调，也可能是同步的！以promise为证，promise 本质是为了解决回调嵌套的问题，优化代码结构，若它本身没有继承并实例化一个异步API，它并不会异步执行。
+
+JavaScript 实现非阻塞运行的方式是异步，异步则使用到浏览器的线程来执行比较耗时的API，而JavaScript 本身仍是单线程。
+
 
 ### JS继承的实现方式?
 - 构造函数继承、原型继承、拷贝继承、组合继承...
@@ -143,7 +159,44 @@ js中常用的异步有：
 
 js 是通过消息队列来处理事件的。
 
-**DOM2事件流：**捕获阶段 -> 目标阶段 -> 冒泡阶段。事件先从 document 往下流，在冒泡时触发目标事件，然后事件继续冒泡到跟节点。
+**事件类型：** 捕获型事件、冒泡型事件、DOM事件流（同时支持前两种事件模型，默认冒泡，通过设置第三个参数为true设置捕获型）。
+
+**DOM2事件流：** 捕获阶段 -> 目标阶段 -> 冒泡阶段。事件先从 document 往下流，在冒泡时触发目标事件，然后事件继续冒泡到跟节点。
+
+**事件处理程序：**
+- DOM0 级事件处理程序
+
+```html
+<input type="button" value="ok" onclick="alert('clicked！')"></input>
+```
+
+或
+
+```js
+var btn = document.getElementById('btn');
+btn.onclick = function (e){
+  alert(this.id);
+}
+```
+
+- DOM2 级事件处理程序
+```
+DOM2级事件定义了两个方法用于处理制定和删除事件处理程序的操作：addEventListener 和 removeEventListener。
+所有的DOM节点都包含这两个方法，并且都接收三个参数：事件类名、事件处理方法、一个布尔值。
+布尔参数true表示在捕获阶段调用事件处理程序；false表示在事件冒泡阶段处理。
+```
+
+- IE 事件处理程序
+```
+实现了 DOM 两个类似的方法 attachEvent 和 detachEvent，这两个方法都接收两个相同的参数，事件处理程序名称和事件处理程序方法。
+由于 IE 只支持事件冒泡，所以添加的程序会被添加到冒泡阶段。
+```
+
+- 跨浏览器的事件处理程序
+```
+跨浏览器的事件处理程序就是创建一个对象，存放用于添加、删除事件处理程序的方法。
+方法接收三个参数：要操作的元素、事件名称、事件处理程序函数。
+```
 
 **事件对象：**`event.stopPropagation`阻止事件传播；`event.preventDefault`阻止默认行为；`event.target` 事件源;
 `event.currentTarget` 当前绑定事件的元素。
@@ -226,7 +279,7 @@ js 是通过消息队列来处理事件的。
    适用于通过`window.open` 或 `iframe` 建立的窗口间的通信。
 
 - WebSocket
-- iframe
+- document.domain + iframe
 - 代理服务器
 
 
@@ -348,6 +401,20 @@ arr.map((x) => x*2);
 - arr.includes(searchElement[,fromIndex])：数组是否包含给定元素，返回 true or false。
 - arr.every(callback[,thisArg])：检测是否**所有元素**满足条件，返回 true or false。
 - arr.some(callback[,thisArg])：检测**至少有一个**满足条件，返回 true or false。
+
+**字符串方法：**
+- str.charAt(index): 得到索引为 index 处的字符。index 默认为零，范围 0 到 len -1，超出返回空。
+- str.charCodeAt(index): 返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。
+- str.concat(string2[, string3, ..., stringN]): 连接字符串，返回连接后的新字符串。
+- str.includes(searchString[, position]): 字符串是否包含某个子串，返回 true or false。
+- str.indexOf(searchValue[, fromIndex]): 返回字符串中某个子串的位置，从前往后找，无则返回 -1。
+- str.lastIndexOf(searchValue[, fromIndex]): 返回字符串中某个子串的位置，从后往前找，无则返回 -1。
+- str.replace(regexp|substr, newSubstr|function): 字符串替换。
+- str.slice(beginIndex[, endIndex]): 字符串切片。
+- str.split([separator[, limit]]): 字符串分割。
+- str.substr(start[, length]): 子串。
+- str.substring(indexStart[, indexEnd]): 子串。
+- str.trim(): 去除字符串首尾空格。
 
 
 **对象方法：**
@@ -485,10 +552,10 @@ fetch接收两个参数，URL和请求options；
 ### JS模块化Commonjs,UMD,CMD规范的了解，以及ES6的模块化跟其他几种的区别，以及出现的意义？
 
 - CommonJS：服务端加载，同步，Nodejs
-- AMD：前端加载，RequireJs，异步加载，预加载
-- CMD：前端加载，Seajs，懒加载
+- AMD：前端加载，RequireJs，异步加载，预加载（加载与执行同时发生）
+- CMD：前端加载，Seajs，懒加载（先加载，需要时执行）
 - UMD：AMD 和 CommonJS的糅合，解决跨平台；运行时
-- ES6 Import、Export：通用；静态确定关系；
+- ES6 Import、Export：通用；静态确定关系；（一个模块只加载一次，只执行一次，下次需要就从内存取，一个模块就是一个单例）
 
 ### 函数柯里化？以及说一下JS的API有哪些应用到了函数柯里化的实现？
 

@@ -92,7 +92,7 @@ categories:
 
 **定义：**content + padding + border + margin
 
-**怪异盒模型：**IE, 即： width = content + padding + border；
+**怪异盒模型：**IE, 即： width = content + padding + border；（IE6一下或IE7、8的怪异模式）
 
 **标准盒模型：**即： width = content；
 
@@ -138,6 +138,13 @@ categories:
   高宽不固定：`position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);`
     或 `display:flex;justify-content:center;align-items:center;`
 
+### CSS 选择器优先级怎么计算？
+css 优先级由高到低顺序：!important > 内联样式 > id选择器 > 类 > 标签|属性|伪类 > *。
+
+精确的计算是根据**特殊性值**来计算的，如果特殊性值相同，那么后定义的覆盖前面的。
+
+内联、id、class、标签 赋予的权重分别是 1000、100、10、1，根据权重取舍元素css属性。
+
 ### css 动画的理解？
 
 **transition**过渡是通过初始和结束两个状态的平滑过渡来实现简单动画。
@@ -159,7 +166,7 @@ CSS3动画好的原因：1、优化DOM操作；2、开启3D加速，但会消耗
 总之：js动画灵活兼容性好，css动画则简单、某些情况下性能好，但缺乏灵活性和兼容性。
 
 requestAnimationFrame：会把每一帧中的所有DOM操作集中起来，在一次重绘或重排中完成，并且时间间隔紧随浏览器的刷新频率，每秒60帧。在隐藏或不可见元素中，requestAnimationFrame将不会进行重绘或重排。
-
+setTimeout 存在时间不准确和丢帧问题。
 
 ### BFC?
 
@@ -190,6 +197,12 @@ sass、less、postcss
 
 - @import 兼容性不好 IE5以上；
 
+### position的值？应用场景？
+- static: 默认，正常文档流。top、right、left、bottom、z-index属性无效。
+- relative: 相对布局，相对自身正常位置，自身位置仍然保留。
+- absolute: 绝对布局，相对于第一个包含块（position不为static），脱离文档流，自身位置不保留，形成新层。
+- fixed: 固定布局，相对于视口坐标，脱离文档流，自身位置不保留，不随滚动条改变位置。
+- sticky: 粘性定位，正常情况下按照正常文档流定位。当滚动到该元素的位置时，元素的定位（相对于包含块）发生改变。
 
 ### css选择器？可以继承的属性？优先级算法？css3新增伪类元素？
 
