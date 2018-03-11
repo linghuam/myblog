@@ -173,6 +173,13 @@ setTimeout 存在时间不准确和丢帧问题。
 css中盒模型布局的css渲染模式。布局方式属于常规文档流。
 元素对其；外边距折叠；包含浮动；防止文字环绕；多列布局。
 
+https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
+
+https://segmentfault.com/a/1190000006740129
+
+http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html
+
+http://www.zhangxinxu.com/wordpress/2015/02/css-deep-understand-flow-bfc-column-two-auto-layout/
 
 ### px/em/rem 的区别?
 

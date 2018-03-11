@@ -122,6 +122,14 @@ git fetch origin
 ```
 git merge origin/serverfix //将远程分支合并到本地分支
 ```
+## 获取第三方远程库更新
+
+```bash
+git remote add upstream  https://github.com/vuejs/vue.git
+git remote -v
+git fetch upstream/master
+git merge upstream/master
+```
 
 ## 常见问题
 

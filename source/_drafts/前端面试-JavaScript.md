@@ -84,9 +84,9 @@ js异步编程的4种方法：http://www.ruanyifeng.com/blog/2012/12/asynchronou
 js异步的理解：http://blog.csdn.net/ebay/article/details/50952294
 
 
-js运行是采用单线程的。决定JavaScript 是否多线程执⾏行是Runtime。JavaScript 的Runtime 有如chrome 中V8、Node.js 等。
+js运行是采用单线程的。决定 JavaScript 是否多线程执⾏行是 Runtime。JavaScript 的 Runtime 有如chrome 中V8、Node.js 等。
 
-为什么会单线程执行，有些理由还是很有道理的：设计GUI 框架，多线程的方式抢占资源是很容易造成死锁的，特别是在操作DOM 上，如果两个线程同时执行，一个执行删除元素，一个执行添加元素，页面就会造成混乱，作为和人直接接触的图形界面，如果出现这种现象，基本上就算是反常识了。
+为什么会单线程执行，有些理由还是很有道理的：设计GUI 框架，多线程的方式抢占资源是很容易造成死锁的，特别是在操作 DOM 上，如果两个线程同时执行，一个执行删除元素，一个执行添加元素，页面就会造成混乱，作为和人直接接触的图形界面，如果出现这种现象，基本上就算是反常识了。
 
 JavaScript 的 Runtime 将不耗时的计算指令在指定的一个主线程中不间断执行，其它耗时的任务，Runtime 会利用回调交给浏览器，由浏览器另行开辟线程来执行，最后将结果集返回给主线程就可以了。
 
