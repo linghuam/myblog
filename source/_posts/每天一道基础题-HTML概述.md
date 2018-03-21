@@ -52,7 +52,7 @@ categories:
 - [博文2](http://www.cnblogs.com/iceflorence/p/6626187.html)
 
 ### 哪些公共属性？哪些特有属性？
-- [博文1](https://html.spec.whatwg.org/multipage/indices.html#elements-3)
+- [文档1](https://html.spec.whatwg.org/multipage/indices.html#elements-3)
 
 ### 参考
 - [MDN HTML 文档](https://developer.mozilla.org/zh-CN/docs/learn/HTML)
