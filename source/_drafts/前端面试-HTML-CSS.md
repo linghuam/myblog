@@ -252,3 +252,6 @@ css 规范规定，每个元素都 `display` 属性，确定该元素类型，�
 - iframe 和主页面共享连接池，而浏览器对相同域的连接有限制，所以影响页面并行加载。
 
 - 如果需要使用 iframe，最好用 js 动态给其加 src 属性。
+
+### 去除inline-block元素间间距的N种方法？
+http://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/
