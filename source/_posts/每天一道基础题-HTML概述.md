@@ -37,22 +37,22 @@ categories:
 - HTML5 分类标准：https://html.spec.whatwg.org/multipage/indices.html#element-content-categories
 {% asset_img 03.png 新分类标准 %}
 
+
 ### 为什么？
 
 #### HTML 与其他标记语言的区别？如 XML。
-
 主要区别在于 XML 是一种存储数据的格式，焦点在数据持久化上。而 HTML 是集数据以及表现、行为于一体，焦点在展现和交互上。
 
 #### 怎么理解 HTML 语义化？为什么要语义化？
-
 利于理解文档结构、利于SEO、利于屏幕阅读器
 
 #### 块级元素与内联元素区别？
 - [博文1](http://www.cnblogs.com/ruxpinsp1/archive/2008/07/03/quicky-block-vs-inline.html)
 - [博文2](http://www.cnblogs.com/iceflorence/p/6626187.html)
 
-### 哪些公共属性？哪些特有属性？
+#### 哪些公共属性？哪些特有属性？
 - [文档1](https://html.spec.whatwg.org/multipage/indices.html#elements-3)
+
 
 ### 参考
 - [MDN HTML 文档](https://developer.mozilla.org/zh-CN/docs/learn/HTML)
