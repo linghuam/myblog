@@ -61,9 +61,9 @@ function deepClone (obj){
 ```
 
 **优缺点：**
-它会抛弃对象的 constructor。也就是深拷贝之后，不管这个对象原来的构造函数是什么，在深拷贝之后都会变成 Object。
-这种方法能正确处理的对象只有 Number, String, Boolean, Array, 扁平对象，即那些能够被 json 直接表示的数据结构。
-RegExp 对象是无法通过这种方式深拷贝。
+1. 他无法实现对函数 、RegExp等特殊对象的克隆
+2. 会抛弃对象的constructor,所有的构造函数会指向Object
+3. 对象有循环引用,会报错
 
 ### 递归拷贝
 
@@ -87,4 +87,4 @@ function deepClone (targetObj, srcObj){
 }
 ```
 
-// TODO...
+// 深克隆还有很多坑待解决，上面的还不够 TODO...
