@@ -12,9 +12,9 @@ categories:
 <!-- more -->
 
 ### CSS 工作原理？
-- 首先下载和解析 html 并最终形成 DOM(Document Object Model)
-- 当 html 还在解析时，下载和解析 CSS 并最终形成 CSSOM(CSS Object Model)
-- 浏览器根据 DOM 和 CSSOM 绘制渲染最终页面
+- 首先下载和解析 html
+- 其次下载和解析 css
+- 浏览器绘制渲染最终页面
 <br>
 {% asset_img 01.png CSS工作原理图 %}
 
