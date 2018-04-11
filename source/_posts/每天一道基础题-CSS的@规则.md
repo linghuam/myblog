@@ -16,8 +16,7 @@ categories:
 
 ### 常规 @ 规则？
 @ + 规则名称 + 规则内容 + 分号
-- [@charset](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@charset)
-，定义样式表使用的字符集
+- [@charset](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@charset)，定义样式表使用的字符集
 - [@import](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@import)，告诉 CSS 引擎引入一个外部样式表
 - [@namespace](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@namespace)，告诉 CSS 引擎必须考虑 XML 命名空间
 
