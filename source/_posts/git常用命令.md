@@ -122,6 +122,17 @@ git fetch origin
 ```
 git merge origin/serverfix //将远程分支合并到本地分支
 ```
+
+* 在远程创建一个与本地 branch_name 同名的分支并跟踪
+```
+git push --set-upstream origin branch_name
+```
+
+* 在本地创建一个与 branch_name 同名分支跟踪远程分支
+```
+git checkout --track origin/branch_name
+```
+
 ## 获取第三方远程库更新
 
 ```bash
