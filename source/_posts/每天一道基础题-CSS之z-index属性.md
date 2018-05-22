@@ -71,6 +71,7 @@ categories:
 
 > 1. IE6/IE7浏览器有个bug，就是z-index:auto的定位元素也会创建层叠上下文
 > 2. 在过去，position:fixed和relative/absolute在层叠上下文这一块是一路货色，都是需要z-index为数值才行。但是，不知道什么时候起，Chrome等webkit内核浏览器，position:fixed元素天然层叠上下文元素，无需z-index为数值。根据我的测试，目前，IE以及FireFox仍是老套路。
+> 3. 在我看来，觉得多数常见，z-index根本就没有出现的必要。知道了内联元素的层叠水平比块状元素高，于是，某条线你想覆盖上去的时候，需要设置position:relative吗？不需要，inline-block化就可以
 
 ## 例子
 ### 不改变 html 结构，不改变 z-index 属性，不改变 position 属性的情况下，将红色框置于最底层？
