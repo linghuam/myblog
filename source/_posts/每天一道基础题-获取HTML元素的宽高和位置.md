@@ -39,7 +39,7 @@ The *Screen* Interface
 
 {% asset_img element-chart.png %}
 
-{% asset_img scrollheight.png %}
+{% asset_img elementscroll.png %}
 
 ### Extensions to the **[HTMLElement](https://www.w3.org/TR/cssom-view-1/#extensions-to-the-htmlelement-interface)** Interface
 
@@ -54,6 +54,7 @@ The *Screen* Interface
 ###  Extensions to the **[Range](https://www.w3.org/TR/cssom-view-1/#extensions-to-the-range-interface)** Interface
 
 {% asset_img rang.png %}
+{% asset_img getboundingclientrect.png%}
 
 ### Extensions to the **[MouseEvent](https://www.w3.org/TR/cssom-view-1/#extensions-to-the-mouseevent-interface)** Interface
 
