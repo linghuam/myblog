@@ -19,7 +19,8 @@ social_title: Follow me
 # Social links 社交链接
 social:
   github: https://github.com/linghuam
-  weibo: https://weibo.com/3261625262/profile?topnav=1&wvr=6&is_all=1
+  # weibo: https://weibo.com/3261625262/profile?topnav=1&wvr=6&is_all=1
+  juejin: https://juejin.im/user/58ff0636ac502e0063bcbcec/activities
   zhihu: https://www.zhihu.com/people/linghua-meng/activities
   email: '1551827898@qq.com'
 
