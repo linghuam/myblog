@@ -56,7 +56,6 @@ widgets:
 - recent_posts
 - archive
 - friendly_link
-- wechat
 
 # 提供以下内置组件
 # - post_content      # 文章目录
