@@ -17,3 +17,7 @@ categories:
 # 节流防抖
 
 - [JS的防抖与节流](https://mp.weixin.qq.com/s/Vkshf-nEDwo2ODUJhxgzVA)
+
+# 单点登录
+
+- [前端分享之cookie的使用及单点登录](https://segmentfault.com/a/1190000011295587)
