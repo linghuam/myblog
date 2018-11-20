@@ -39,3 +39,8 @@ categories:
 - [vector tile1](http://zhihu.esrichina.com.cn/article/567)
 - [vector tile2](http://qiancy.com/)
 - [vedio](https://www.bilibili.com/video/av32500008/)
+
+# Event Loop
+
+- [Event Loop的规范和实现](https://juejin.im/post/5a6155126fb9a01cb64edb45)
+- [这一次，彻底弄懂 JavaScript 执行机制](https://juejin.im/post/59e85eebf265da430d571f89)
