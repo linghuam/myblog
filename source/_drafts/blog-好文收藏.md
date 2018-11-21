@@ -44,3 +44,9 @@ categories:
 
 - [Event Loop的规范和实现](https://juejin.im/post/5a6155126fb9a01cb64edb45)
 - [这一次，彻底弄懂 JavaScript 执行机制](https://juejin.im/post/59e85eebf265da430d571f89)
+
+# 空间索引
+
+- [深入浅出空间索引：为什么需要空间索引](https://www.cnblogs.com/LBSer/p/3392491.html)
+- [深入浅出空间索引：2](https://www.cnblogs.com/LBSer/p/3403933.html)
+- [空间索引原理](https://www.cnblogs.com/LBSer/category/575692.html)
