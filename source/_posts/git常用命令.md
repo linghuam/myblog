@@ -199,3 +199,56 @@ git merge upstream/master
 ## 常见问题
 
 * 乱码 git config --global gui.encoding utf-8
+
+
+
+## new
+
+git init
+
+git commit
+
+git log 
+
+git checkout -b test
+git checkout -b test origin/aaa
+
+git status
+
+git add .
+git add a
+
+// --squash 将多次提交信息合并成一个提交融合进当前仓库
+//squash 压缩，压扁
+git merge --squash feature1
+
+git log
+git log --文件名
+
+git diff 
+// 比较分支
+git diff 分支1 分支2 // 以分支1为基准
+git diff 提交1hash 提交2hash
+
+// 查看谁提交的
+git blame a
+
+// 删除远程分支
+git push [远程名] :[分支名]
+git push origin :test
+
+// 删除本地分支
+git branch -d test
+
+// 打补丁
+git diff master > a.patch
+git apply a.patch
+
+// 把另一个分支的某次提交融到一个分支
+// 当分支差异大，无法全部融合的时候，融合某一次提交
+git cherry-pick
+
+// 还原
+git revert 提交hash // 将修改逆向运行一次，并重新提交
+
+arc diff
