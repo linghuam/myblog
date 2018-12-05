@@ -8,24 +8,26 @@ categories:
   - tool
 ---
 
+# git常用命令
+
 ## git教程
 
-* [廖雪峰-git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-* [高级教程-Pro Git](http://git.oschina.net/progit/)
-* [官网-GitBook](https://git-scm.com/book/zh/v2)
+- [廖雪峰-git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+- [高级教程-Pro Git](http://git.oschina.net/progit/)
+- [官网-GitBook](https://git-scm.com/book/zh/v2)
+
 <!-- more -->
 
-## git常用命令
+## 配置
 
-### 配置
+- 用户信息
 
-* 用户信息
-```
- $ git config --global user.name "John Doe"
- $ git config --global user.email johndoe@example.com
- $ git config core.ignorecase false  //对文件名大小写敏感
- $ git config --global credential.helper store //记住密码
- $ git config --global gui.encoding utf-8 //git乱码问题
+```bash
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config core.ignorecase false  //对文件名大小写敏感
+git config --global credential.helper store //记住密码
+git config --global gui.encoding utf-8 //git乱码问题
 ```
 
 * 文本编辑器
@@ -59,14 +61,66 @@ $ git config --global credential.helper store
 在空文件夹下面创建一个.keep文件
 ```
 
-### 克隆远程库
+## 新增库
 
+```bash
+# 本地
+git init
+# 远程
+git clone https://github.com/linghuam/Leaflet.git
 ```
-git clone http://git.oschina.net/iOceanPlus/XGSWebProject
 
-在本地新建了一个版本库，默认建一个本地master分支。
-用origin/master(远程跟踪分支，用户只读)表示远程库的master分支
+## 查看状态
+
+```bash
+# 查看当前状态
+git status
+# 简写
+# 新添加的未跟踪文件前面有 ?? 标记
+# 新添加到暂存区中的文件前面有 A 标记
+# 修改过的文件前面有 M 标记
+git status -s
+# 或
+git status --short
 ```
+
+## 查看提交历史
+
+```bash
+# 默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面
+git log
+# 一个常用的选项是 -p，用来显示每次提交的内容差异，也可以加上 -2 来仅显示最近两次提交
+git log -p -2
+# 看到每次提交的简略的统计信息
+git log --stat
+```
+
+https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C
+
+## 文件操作
+
+## 分支操作
+
+## 关联远程库
+
+## 回滚操作
+
+```bash
+# 修改上次提交，最终只有一个提交
+git commit --amend
+# 取消暂存文件
+git reset HEAD CONTRIBUTING.md
+# 撤消对文件的修改
+git checkout -- CONTRIBUTING.md
+```
+
+## 其他
+
+
+
+
+
+
 
 ### 分支
 
@@ -145,3 +199,56 @@ git merge upstream/master
 ## 常见问题
 
 * 乱码 git config --global gui.encoding utf-8
+
+
+
+## new
+
+git init
+
+git commit
+
+git log 
+
+git checkout -b test
+git checkout -b test origin/aaa
+
+git status
+
+git add .
+git add a
+
+// --squash 将多次提交信息合并成一个提交融合进当前仓库
+//squash 压缩，压扁
+git merge --squash feature1
+
+git log
+git log --文件名
+
+git diff 
+// 比较分支
+git diff 分支1 分支2 // 以分支1为基准
+git diff 提交1hash 提交2hash
+
+// 查看谁提交的
+git blame a
+
+// 删除远程分支
+git push [远程名] :[分支名]
+git push origin :test
+
+// 删除本地分支
+git branch -d test
+
+// 打补丁
+git diff master > a.patch
+git apply a.patch
+
+// 把另一个分支的某次提交融到一个分支
+// 当分支差异大，无法全部融合的时候，融合某一次提交
+git cherry-pick
+
+// 还原
+git revert 提交hash // 将修改逆向运行一次，并重新提交
+
+arc diff

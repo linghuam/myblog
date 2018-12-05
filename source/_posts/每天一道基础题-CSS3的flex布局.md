@@ -73,6 +73,10 @@ categories:
 
 ## 参考
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [old-flexbox-and-new-flexbox](https://css-tricks.com/old-flexbox-and-new-flexbox/)
+- [w3c](https://drafts.csswg.org/css-flexbox-1/)
 - [A Visual Guide to CSS3 Flexbox Properties](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)
 - [Flex 布局教程 阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 - [CSS Grid和Flexbox解决实际的布局问题](http://www.w3cplus.com/css3/css-grid-flexbox-solving-real-world-problems.html)
+- [关于flex兼容性的文章](https://hopefuture.gitbooks.io/h5-learning/content/css3/flex/compatibility.html)
+- [flex 布局在移动端的兼容性问题 ](https://github.com/iuap-design/blog/issues/190)
