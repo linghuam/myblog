@@ -33,7 +33,7 @@ categories:
 - 删除光标右侧字符：fn + delete
 - 删除光标左侧所有字符：cmd + delete
 - cmd + 方向键 将光标移动到最边边
--
+
 
 
 ## 参考

@@ -143,3 +143,4 @@ function debounce(func, wait, immediate) {
 - [如何不择手段提升scroll事件的性能](https://github.com/escawn/blog/issues/5)
 - [The Difference Between Throttling and Debouncing](https://css-tricks.com/the-difference-between-throttling-and-debouncing/)
 - [实例解析防抖动（Debouncing）和节流阀（Throttling）](https://jinlong.github.io/2016/04/24/Debouncing-and-Throttling-Explained-Through-Examples/)
+- [一次发现underscore源码bug的经历以及对学术界『拿来主义』的思考](http://www.cnblogs.com/zichi/p/5331426.html)
