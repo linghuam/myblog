@@ -11,7 +11,10 @@ categories:
 收集 mac 使用技巧
 <!-- more -->
 
+# macos使用技巧
+
 ## 软件安装
+
 - mac 文件类型：dmg、pkg、zip、tar
 - windows 文件类型：exe、msi
 - 安装包：pkg
@@ -23,7 +26,12 @@ categories:
 - cleanmymac 清理软件
 - moom 分屏软件
 
+- dash：开发文档
+- home brew： macOS 缺失的软件包的管理器
+- iterm2 ：命令行工具
+
 ## 技巧
+
 - 长按最大化按钮分屏；软件moom
 - 快速查看：选中文件按空格键
 - 文件改名：选中文件按回车
@@ -34,7 +42,50 @@ categories:
 - 删除光标左侧所有字符：cmd + delete
 - cmd + 方向键 将光标移动到最边边
 
+## 命令行
 
+```bash
+# 文件列表
+ls
+ls -la
+
+# 定位
+cd filename or dirname
+cd ..
+
+# 创建文件夹
+mkdir dirname
+
+# 创建文件
+touch filename
+
+# 删除文件夹
+rm -rf dirname
+
+# 删除文件
+rm filename
+
+# 移动文件
+mv sourceFile target
+# example
+mv a.html ../test
+mv a.txt b.html ../test
+mv * ../test
+mv *.js ../../
+
+# 复制文件
+cp sourceFile target
+# example
+cp a.html test/a.html
+```
+
+## 快捷键
+
+- 清除光标之前的所有内容：Ctrl + U
+- 光标跳到起始位置：Ctrl + A
+- 光标调到末尾位置：Ctrl + E
+- 搜索命令：Ctrl + R
 
 ## 参考
+
 - [MAC OS 小白入门视频](https://www.youtube.com/watch?v=pMmuk9bthUE)
