@@ -77,6 +77,9 @@ mv *.js ../../
 cp sourceFile target
 # example
 cp a.html test/a.html
+
+# 退出并保存
+esc + :wq
 ```
 
 ## 快捷键
