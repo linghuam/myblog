@@ -1,0 +1,146 @@
+---
+title: JS-节流与防抖
+comments: true
+date: 2018-06-24 22:01:08
+tags:
+- javascript
+- 防抖与节流
+categories:
+- javascript
+---
+
+在面对一些用户的频繁操作时，如滚动、输入、频繁点击等，需要不断响应，这样难免会造成一些性能浪费和消耗，防抖与节流就是来解决这一问题的。
+<!--more-->
+
+## 什么是防抖(debounce)？
+
+在任务频繁触发的情况下，只有在任务触发的间隔超过指定间隔的时候，任务才会执行。
+
+比如在用户输入用户名时同时检查用户名是否存在，如果每次输入都请求服务器，压力太大，就需要在用户输入后延迟一段时间请求。
+
+可以通过闭包来保存`setTimeout`返回值，每当用户输入的时候把前一个`setTimeout`清除掉，然后又创建一个新的`setTimeout`。
+
+```js
+function debounce(fn, delay) {
+    let timer = null
+    return function () {
+        clearTimeout(timer)
+        timer = setTimeout(()=>{
+            fn.apply(this, arguments)
+        },delay)
+    }
+}
+```
+
+## 什么是节流(throttle)？
+
+在指定时间间隔内只会执行一次任务。
+
+比如在页面滚动的时候计算是否滚动到底部，如果直接监听滚动事件，就会在滚动过程中不断计算，为了节省开销，只需要每隔一定时间计算一次。
+
+函数的节流也可以通过一个闭包保存一个标记，在每次执行的开头判断这个标记是否为true，如果为true就继续执行，否则return，判断完标记后立即把标记设为false，然后把外部传入的函数执行包在一个setTimeout中，最后在setTimeout完毕后把标记设为true。
+
+```js
+function throttle(fn, delay) {
+    let canRun = true
+    return function () {
+        if (!canRun) return 
+        canRun = false
+        setTimeout(() => {
+            fn.apply(this, arguments)
+            canRun = true
+        }, delay)
+    }
+}
+```
+
+## 防抖与节流的区别？
+
+**电梯例子**
+
+想象每天上班大厦底下的电梯。把电梯完成一次运送，类比为一次函数的执行和响应。假设电梯有两种运行策略 throttle 和 debounce ，超时设定为15秒，不考虑容量限制。
+
+throttle 策略的电梯。保证如果电梯第一个人进来后，15秒后准时运送一次，不等待。如果没有人，则待机。
+
+debounce 策略的电梯。如果电梯里有人进来，等待15秒。如果又人进来，15秒等待重新计时，直到15秒超时，开始运送。
+
+## 防抖与节流的实现？
+
+- [underscore版本](https://github.com/jashkenas/underscore/blob/master/underscore.js)
+- [lodash-debounce](https://github.com/lodash/lodash/blob/master/debounce.js)
+- [lodash-throttle](https://github.com/lodash/lodash/blob/master/throttle.js)
+
+注意：除了使用 setTimeout ,还可以用 requestAnimationFrame 实现。
+
+```js
+function throttle = function(func, wait, options) {
+    var timeout, context, args, result;
+    var previous = 0;
+    if (!options) options = {};
+
+    var later = function() {
+        previous = options.leading === false ? 0: +new Date();
+        timeout = null;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+    };
+
+    var throttled = function() {
+        var now = +new Date();
+        if (!previous && options.leading === false) privious = now;
+        var remaining = wait - (now - previous);
+        context = this;
+        args = arguments;
+        if (remaining <= 0 || remaining > wait) {
+            if (timeout) {
+                clearTimeout(timeout);
+                timeout = null;
+            }
+            previous = now;
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+        } else if (!timeout && options.trailing !== false) {
+            timeout = setTimeout(later, remaining);
+        }
+        return result;
+    };
+
+    throttled.cancel = function() {
+        clearTimeout(timeout);
+        previous = 0;
+        timeout = context = args = null;
+    }
+    return throttled;
+}
+```
+防抖
+```js
+function debounce(func, wait, immediate) {
+    // 设置一个变量记录上一次调用
+    var timeout;
+    return function(args) {
+        // 每次执行前清除之前的调用
+        if (timeout) clearTimeout(timeout);
+        var callNow = immediate && !timeout;
+        if (callNow) {
+            func.apply(this, args)
+        } else {
+            timeout = setTimeout(() => {
+                func.apply(this, args)
+            }, wait)
+        }
+    }
+}
+```
+
+## 参考
+
+- [浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://blog.coding.net/blog/the-difference-between-throttle-and-debounce-in-underscorejs)
+- [juejin](https://juejin.im/entry/58c0379e44d9040068dc952f)
+- [demo](http://demo.nimius.net/debounce_throttle/)
+- [JavaScript 函数节流和函数去抖应用场景辨析](https://github.com/hanzichi/underscore-analysis/issues/20)
+- [JS经典interview(三) - 节流和防抖](https://github.com/ntscshen/ntscshen.github.io/issues/4)
+- [如何不择手段提升scroll事件的性能](https://github.com/escawn/blog/issues/5)
+- [The Difference Between Throttling and Debouncing](https://css-tricks.com/the-difference-between-throttling-and-debouncing/)
+- [实例解析防抖动（Debouncing）和节流阀（Throttling）](https://jinlong.github.io/2016/04/24/Debouncing-and-Throttling-Explained-Through-Examples/)
+- [一次发现underscore源码bug的经历以及对学术界『拿来主义』的思考](http://www.cnblogs.com/zichi/p/5331426.html)
