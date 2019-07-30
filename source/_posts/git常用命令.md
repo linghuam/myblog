@@ -103,6 +103,21 @@ https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8
 
 ## 关联远程库
 
+```bash
+# 本地库关联远程库，在本地仓库目录运行命令
+$ git remote add origin git@github.com:nanfei9330/learngit.git
+
+# 推送master分支的所有内容
+$ git push -u origin master
+# 第一次使用加上了-u参数，是推送内容并关联分支。
+# 推送成功后就可以看到远程和本地的内容一模一样，下次只要本地作了提交，就可以通过命令：
+$ git push origin master
+#把最新内容推送到Github
+
+# 为推送当前分支并建立与远程上游的跟踪，使用
+git push --set-upstream origin master
+```
+
 ## 回滚操作
 
 ```bash
