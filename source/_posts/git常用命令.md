@@ -101,6 +101,106 @@ https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8
 
 ## 分支操作
 
+### 创建分支
+
+```bash
+# 基于本地 master 分支创建分支
+$ git branch #查看本地分支
+$ git pull (git pull origin master)
+$ git checkout master
+$ git checkout -b newBranchName
+
+# 基于远程 master 分支创建分支
+$ git branch -a #查看本地线上分支
+$ git checkout remotes/origin/master
+$ git checkout -b newBranchName
+
+# 本地新分支推送创建远程分支
+$ git push origin <本地分支名>:<远程分支名>
+
+# 关联远程分支
+$ git branch --set-upstream-to=origin/<远程分支名> <本地分支名>
+``` 
+### 切换分支
+
+```bash
+# 工作区没新代码切换分支
+$ git checkout newBranch
+
+# 工作区有新代码切换分支
+# 工作区间有未提交代码，切换分支自动执行"git merge"操作，故有冲突将无法切换成功；
+$ git stash save ‘存储说明’
+$ git checkout B
+$ 处理完后
+$ git checkout A
+$ git stash pop
+
+# 如果本来想在A分支上开发， 开发过程中才发现当前处在B分支，想强制将工作区间代码迁到A分支也可以借助“工作现场”完成。
+$ git stash save ‘存储说明’
+$ git checkout A
+$ git stash pop
+// 如有冲突且处理完所有冲突
+$ git add -A
+
+# 切换分支异常处理
+# 从A分支切换到B分支由于git异常导致虽然切换分支成功，但在当前B分支上留存了大量A分支的代码
+// 将所有改动提交到本地仓库
+$ git add -A
+$ git commit -m "这个commit会被覆盖"
+//B 是当前分支名
+$ git reset --hard origin/B
+```
+### 合并分支
+
+```bash
+# 正常合并分支代码
+
+## 合并本地分支代码
+$ git merge branchName
+
+## 合并远程分支代码
+$ git pull origin branchName
+
+# 合并代码冲突解决
+## 手动解决冲突后
+## 告诉git冲突已解决: 
+$ git add -A
+## 合并完成，提交代码: 
+$ git commit -m '说明'
+$ git push
+
+# 合并代码异常处理
+// 将所有改动提交到本地仓库
+$ git add -A
+$ git commit -m "这个commit会被覆盖"
+//B 是当前分支名
+$ git reset --hard origin/B
+
+# 合并代码减少commit次数（简洁合并）
+
+## 方案一：
+$ "git rebase xxx"，如有冲突，"git rebase --abort"，再换用"git merge xxx"。
+
+## 方案二：("git push"之前，将本地多个commit合并成一个)
+$ git rebase -i # 进入交互模式，自动打开vim
+$ 将后两个“pick”改成 “s”,保存退出(ESC + : + wq）
+$ 填写新的commit注释，保存退出
+$ 合并完成
+```
+
+### 删除分支
+
+```bash
+# 删除本地分支
+# "-d" 如果该分支代码未合并到其他分支，将无法删除；
+# "-D" 强制删除分支，不会出现任何提示；
+$ git branch -D xxxx 
+
+# 删除远程分支
+$ git push origin --delete newBranch
+```
+
+ 
 ## 关联远程库
 
 ```bash
