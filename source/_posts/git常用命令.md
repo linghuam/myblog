@@ -186,6 +186,14 @@ $ git rebase -i # 进入交互模式，自动打开vim
 $ 将后两个“pick”改成 “s”,保存退出(ESC + : + wq）
 $ 填写新的commit注释，保存退出
 $ 合并完成
+
+
+# 合并部分提交
+# 如将 A 分支的某几个提交合并到 B 分支，而不是将整个 A 分支合并到 B
+$ git checkout A
+$ git log （查看A的commit id）
+$ git checkout B
+$ git cherry-pick <c1>..<c2>(左开右闭区间) 或 git cherry-pick <c1>^..<c2>(闭区间)
 ```
 
 ### 删除分支
