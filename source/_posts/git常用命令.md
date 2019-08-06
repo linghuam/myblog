@@ -176,6 +176,10 @@ $ git commit -m "这个commit会被覆盖"
 //B 是当前分支名
 $ git reset --hard origin/B
 
+# 撤销一个合并
+如果你觉得你合并后的状态是一团乱麻，想把当前的修改都放弃，你可以用下面的命令回到合并之前的状态：
+$ git reset --hard HEAD
+
 # 合并代码减少commit次数（简洁合并）
 
 ## 方案一：
