@@ -51,3 +51,12 @@ n  中地公司的 MAPGIS IMS
 ## 应用和展望
 
 ### 痛点
+
+https://cntchen.github.io/2016/05/09/%E5%9B%BD%E5%86%85%E4%B8%BB%E8%A6%81%E5%9C%B0%E5%9B%BE%E7%93%A6%E7%89%87%E5%9D%90%E6%A0%87%E7%B3%BB%E5%AE%9A%E4%B9%89%E5%8F%8A%E8%AE%A1%E7%AE%97%E5%8E%9F%E7%90%86/
+
+https://www.cnblogs.com/arxive/p/6017260.html
+
+https://www.wolfram.com/language/11/geo-computation/cartographic-geo-projections.zh.html
+
+https://zhuanlan.zhihu.com/p/24981976
+
