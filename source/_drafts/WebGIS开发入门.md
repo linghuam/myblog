@@ -14,26 +14,20 @@ categories:
 
 ## 什么是 WebGIS
 
-GIS+WWW=Web GIS
+GIS + WWW = Web GIS
+
 Web: 不用解释
+
 GIS: 重点解释GIS
 
 geographic information systems 
 geographic information science
 地理信息系统（科学）
 
+短视频：https://www.bilibili.com/video/av17091140
 
-几种商业化Web GIS平台（了解）
-
-n  MapInfo公司的MapXtreme
-
-n  ESRI公司的ArcIMS
-
-n  Adobe公司的 MapGuide
-
-n  超图公司的SuperMap IS
-
-n  中地公司的 MAPGIS IMS
+交叉学科
+![](./WebGIS开发入门/gis相关学科.png)
 
 
 ## 关键技术及原理
