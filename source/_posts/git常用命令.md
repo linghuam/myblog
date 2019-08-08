@@ -105,15 +105,13 @@ https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8
 
 ```bash
 # 基于本地 master 分支创建分支
-$ git branch #查看本地分支
-$ git pull (git pull origin master)
-$ git checkout master
 $ git checkout -b newBranchName
 
 # 基于远程 master 分支创建分支
-$ git branch -a #查看本地线上分支
-$ git checkout remotes/origin/master
-$ git checkout -b newBranchName
+$ git checkout -b newBranchName origin/branchName
+
+# 查看本地分支与远程分支的对应关系
+$ git remote show origin 
 
 # 本地新分支推送创建远程分支
 $ git push origin <本地分支名>:<远程分支名>
@@ -198,6 +196,7 @@ $ git checkout A
 $ git log （查看A的commit id）
 $ git checkout B
 $ git cherry-pick <c1>..<c2>(左开右闭区间) 或 git cherry-pick <c1>^..<c2>(闭区间)
+$ git cherry-pick <commitId>
 ```
 
 ### 删除分支
