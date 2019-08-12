@@ -32,6 +32,17 @@ $ hexo clean
 
 ```
 
+## 分类
+
+* html
+* css
+* js
+* gis
+* 可视化
+* 随笔
+* git
+* other
+
 ## ISSUE
 
 * 文章加 ```<!--more-->``` 是截取摘要部分
