@@ -38,14 +38,18 @@ geographic information science
 
 数据类型
 
-- 矢量
+- 矢量（定位明显，属性隐含）
   * 点
   * 线
   * 面
+路网、poi
 
-- 栅格
-  * 影响
+- 栅格（属性明显，定位隐含）
+  * 卫星影像
   * DEM
+
+气象、降雨量。。。
+- 相互转化
 
 ### 坐标系与投影
 
@@ -53,14 +57,14 @@ geographic information science
 https://www.cnblogs.com/onsummer/p/7451128.html
 
 
-### 地图服务
+### 地图服务（以 OGC 标准为例）
 
 ### 空间分析与可视化
 
 
 ## 应用和展望
 
-## 参考资料
+## 资料分享
 
 https://www.cnblogs.com/onsummer/p/7451128.html
 
