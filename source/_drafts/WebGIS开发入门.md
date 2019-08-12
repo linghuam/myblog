@@ -32,17 +32,35 @@ geographic information science
 
 ## 关键技术及原理
 
-### OGC标准 & W3C标准
-
 ### 数据
 
-### 坐标系
+结构化数据（关系表） & 半结构化数据（对象属性不固定） & 非结构化数据（图片、视屏、音频）
 
-### 空间分析
+数据类型
 
-### 可视化
+- 矢量
+  * 点
+  * 线
+  * 面
+
+- 栅格
+  * 影响
+  * DEM
+
+### 坐标系与投影
+
+聊聊GIS中那些坐标系：
+https://www.cnblogs.com/onsummer/p/7451128.html
+
+
+### 地图服务
+
+### 空间分析与可视化
+
 
 ## 应用和展望
+
+## 参考资料
 
 https://www.cnblogs.com/onsummer/p/7451128.html
 
