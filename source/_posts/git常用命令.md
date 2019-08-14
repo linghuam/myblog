@@ -109,6 +109,8 @@ $ git checkout -b newBranchName
 
 # 基于远程 master 分支创建分支
 $ git checkout -b newBranchName origin/branchName
+# 使用 -t 参数，默认在本地建立一个与远端分支同名的分支
+或 $ git checkout -t origin/branchName
 
 # 查看本地分支与远程分支的对应关系
 $ git remote show origin 
@@ -211,6 +213,13 @@ $ git branch -D xxxx
 $ git push origin --delete newBranch
 ```
 
+### 从某个分支检出单个文件
+
+```bash
+$ git checkout [branchName] -- [fileName]
+从某个 commit 中取到 文件
+$ git checkout [commitId] -- [fileName]
+```
  
 ## 关联远程库
 
@@ -238,9 +247,22 @@ git commit --amend
 git reset HEAD CONTRIBUTING.md
 # 撤消对文件的修改
 git checkout -- CONTRIBUTING.md
+# 清除所有未跟踪的变更
+$ git clean -f -d
+# 清除所有已经跟踪的变更
+$ git checkout .
 ```
 
 ## 其他
+
+```bash
+# 查看日志时过滤掉 merge commits
+$ git log --oneline --no-merges
+# 终极技能
+$ git help -g
+```
+
+
 
 
 
