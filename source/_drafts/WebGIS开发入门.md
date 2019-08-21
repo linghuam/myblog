@@ -51,6 +51,25 @@ geographic information science
 气象、降雨量。。。
 - 相互转化
 
+数据描述
+矢量：geojson\shp\wkt\wkb\kml
+https://geojson.org/
+```
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+  },
+  "properties": {
+    "name": "Dinagat Islands"
+  }
+}
+```
+shp：https://www.cnblogs.com/nygfcn1234/p/3399605.html
+
+栅格：dem
+
 ### 坐标系与投影
 
 聊聊GIS中那些坐标系：
@@ -85,3 +104,6 @@ https://github.com/wandergis/coordtransform
 https://segmentfault.com/a/1190000011276788
 https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/
 
+
+OGC标准
+https://www.jianshu.com/p/fa323448bf47
