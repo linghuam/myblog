@@ -136,6 +136,10 @@ https://enterprise.arcgis.com/zh-cn/server/latest/create-web-apps/windows/a-fram
 WMS
 WMTS
 
+瓦片原理：
+https://blog.csdn.net/ahence/article/details/44057681
+https://blog.csdn.net/tmchongye/article/details/63536108
+https://blog.csdn.net/wd4java/article/details/44956799
 
 ### 技术资源
 
