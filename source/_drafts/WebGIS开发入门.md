@@ -53,6 +53,8 @@ https://www.esri.com/en-us/what-is-gis/overview#image6
 气象、降雨量。。。
 - 相互转化
 
+http://zhihu.esrichina.com.cn/?/article/528
+
 数据描述
 矢量：geojson\shp\wkt\wkb\kml
 https://geojson.org/
@@ -102,6 +104,22 @@ https://www.wolfram.com/language/11/geo-computation/cartographic-geo-projections
 地图投影的科普向：
 https://zhuanlan.zhihu.com/p/24981976
 
+地理坐标系、大地坐标系与地图投影与重投影详解
+https://blog.csdn.net/angelazy/article/details/44085099
+
+BBC《地图》纪录片
+从“我们看到的地图一直都错得离谱”说起：
+http://www.3snews.net/column/252000039786.html
+
+墨卡托投影
+https://blog.csdn.net/qq_35732147/article/details/83856513
+
+
+墨卡托投影的地图最大的缺点就是和现实差别太大，变形非常严重。
+
+在墨卡托投影的地图上，变形最严重的就是格陵兰岛了。地图上非洲的大小和格陵兰岛差不多大，但如果计算一下的话：非洲面积约是3020万平方千米，格陵兰岛面积约是217万平方千米，也就是说，非洲的面积是格陵兰岛的14倍！
+
+再比如墨卡托投影的地图上的加拿大，看起来是个瘦瘦的长方形，但实际上，加拿大是个类似正方形的形状。它不仅扭曲得不像样，而且还被放大了好几倍。在地图上加拿大的面积大约是美国的三倍，实际上加拿大比美国大不了多少。
 
 ### 常见的地图服务
 
@@ -111,11 +129,17 @@ https://service.tianditu.gov.cn/#
 OGC:
 https://blog.csdn.net/u014177758/article/details/73250749
 
+地图类型：
+https://enterprise.arcgis.com/zh-cn/server/latest/create-web-apps/windows/a-framework-for-deploying-web-gis-applications.htm
 
 
 WMS
 WMTS
 
+瓦片原理：
+https://blog.csdn.net/ahence/article/details/44057681
+https://blog.csdn.net/tmchongye/article/details/63536108
+https://blog.csdn.net/wd4java/article/details/44956799
 
 ### 技术资源
 
@@ -144,3 +168,6 @@ https://www.jianshu.com/p/fa323448bf47
 
 GIS开发者
 https://www.giserdqy.com/gis/gisknowledge/
+
+空间关系：
+https://malagis.com/gis-spatial-relations.html
