@@ -181,3 +181,17 @@ https://malagis.com/gis-spatial-relations.html
 
 从底层谈，WebGIS 原理、设计、实现：
 https://www.cnblogs.com/naaoveGIS/category/600559.html
+
+面积和距离测量：
+
+(十七)WebGIS中距离及面积测量的原理和实现以及坐标转换的简单介绍：https://www.cnblogs.com/naaoveGIS/p/4115021.html
+"Some Algorithms for Polygons on a Sphere"
+https://trs.jpl.nasa.gov/handle/2014/41271
+https://trs.jpl.nasa.gov/bitstream/handle/2014/41271/07-0286.pdf?sequence=1&isAllowed=y
+
+
+距离：
+http://www.movable-type.co.uk/scripts/latlong.html
+https://en.wikipedia.org/wiki/Haversine_formula
+https://www.cnblogs.com/softidea/p/6925673.html
+https://www.cnblogs.com/softfair/p/distance_of_two_latitude_and_longitude_points.html
