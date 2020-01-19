@@ -3,7 +3,7 @@ menu:
   首页: /
   # 项目展示: https://linghuam.github.io/project-gallery/dist/#/
   归档: /archives
-  # 关于: /about
+  关于: /about
 rss: /atom.xml
 
 # footer底部显示联系邮箱（在博客配置文件下添加email配置也是一样的效果）
@@ -53,7 +53,8 @@ widgets:
 - social
 - post_content
 - category
-# - tagcloud
+- tag
+- tagcloud
 # - recent_posts
 # - archive
 # - friendly_link
