@@ -1,13 +1,14 @@
 ---
 title: W3C-Canvas文档翻译
 comments: true
-date: 2020-01-21 17:03:54
 tags:
-- 翻译
+  - 翻译
 categories:
-- 可视化
-- 2D
+  - 可视化
+  - 2D
+date: 2020-01-21 17:03:54
 ---
+
 
 翻译了 W3C-Canvas 文档，加深对 canvas 基础的理解和掌握。
 
