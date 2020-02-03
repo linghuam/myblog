@@ -1,12 +1,12 @@
 ---
 title: macos使用技巧
 comments: true
+categories:
+  - 开发工具
 date: 2018-04-23 23:30:40
 tags:
-- mac
-categories:
-- tool
 ---
+
 
 收集 mac 使用技巧
 <!-- more -->
@@ -41,6 +41,8 @@ categories:
 - 删除光标右侧字符：fn + delete
 - 删除光标左侧所有字符：cmd + delete
 - cmd + 方向键 将光标移动到最边边
+- `Command + Shift + .`显示隐藏文件(夹)，再按一次恢复。
+- finder下 `Command + Shift + G`前往任意文件夹
 
 ## 命令行
 
