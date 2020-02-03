@@ -1,11 +1,11 @@
 ---
-title: 直线生成算法-直线的DDA算法
+title: 计算机图形学-直线的DDA算法
 comments: true
 date: 2018-01-12 13:14:01
 tags:
-  - 直线生成算法
 categories:
-  - 计算机图形学
+- 可视化
+- 计算机图形学
 ---
 
 DDA 是数字微分分析式（digital differential analyzer）的缩写。DDA算法是一种基于直线的微分方程来生成直线的方法。

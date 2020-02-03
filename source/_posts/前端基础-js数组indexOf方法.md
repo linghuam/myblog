@@ -1,11 +1,11 @@
 ---
-title: 每天一道基础题-js数组indexOf方法
+title: 前端基础-js数组indexOf方法
 comments: true
 date: 2018-03-22 15:14:26
 tags:
-  - JavaScript
 categories:
-  - 每天一道基础题
+- 前端基础
+- JavaScript
 ---
 
 每日的基础学习笔记，不求大而全，追求精致和短小，主要从底层技术基础开始，记录一些核心概念、实践应用和原理方法，帮助自己理解前端基础，建立前端知识体系。多问几个**为什么、怎么做**

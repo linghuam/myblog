@@ -1,11 +1,11 @@
 ---
-title: 每天一道基础题-CSS之z-index属性
+title: 前端基础-CSS之z-index属性
 comments: true
 date: 2018-05-21 21:52:59
 tags:
-  - css
 categories:
-  - 每天一道基础题
+- 前端基础
+- CSS
 ---
 
 最近在做 Vue 项目时，使用 ElementUI 做页面的 UI 框架，但是在写页面的过程中出现很多奇怪的现象，调试发现一个原因是 ElementUI 框架改变了很多默认的样式，第二个原因是自己页面的 z-index 和 position 使用不恰当，遂决定要彻底弄懂一些 CSS 方面的问题，毕竟前端 CSS 是重要的一环，不能似懂非懂。

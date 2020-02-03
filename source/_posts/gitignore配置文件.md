@@ -3,9 +3,9 @@ title: gitignore配置文件
 comments: true
 date: 2018-01-05 17:31:00
 tags:
-  - git
 categories:
-  - config
+- 开发工具
+- git
 ---
 
 gitignore 文件是用来标记文件是否被纳入版本管理系统的配置文件，一般在 git 仓库的根目录下创建名为 `.gitignore`的文件。下面详细说明它的一些用法。

@@ -3,6 +3,7 @@ title: W3C-Canvas文档翻译
 comments: true
 tags:
   - 翻译
+  - canvas
 categories:
   - 可视化
   - 2D

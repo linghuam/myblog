@@ -3,9 +3,9 @@ title: git常用命令
 comments: true
 date: 2018-01-05 17:25:28
 tags:
-  - git
 categories:
-  - tool
+- 开发工具
+- git
 ---
 
 # git常用命令

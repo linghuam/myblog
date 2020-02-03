@@ -3,7 +3,7 @@ title: git如何安全回滚
 comments: true
 categories:
   - 开发工具
-  - GIT
+  - git
 date: 2020-01-17 19:57:46
 tags:
 ---

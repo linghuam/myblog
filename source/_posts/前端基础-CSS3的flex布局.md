@@ -1,11 +1,12 @@
 ---
-title: 每天一道基础题-CSS3的flex布局
+title: 前端基础-CSS3的flex布局
 comments: true
 date: 2018-05-22 21:42:09
 tags:
-  - css
+- css3
 categories:
-  - 每天一道基础题
+- 前端基础
+- CSS
 ---
 
 最近做项目时，用了不少 CSS3 的 flex 布局，感觉非常棒，比老式布局方式(position+display+float)好用得多，所以打算写一篇文章总结一下。

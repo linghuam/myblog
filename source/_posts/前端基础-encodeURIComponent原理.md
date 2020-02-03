@@ -1,11 +1,11 @@
 ---
-title: 每天一道基础题-encodeURIComponent原理
+title: 前端基础-encodeURIComponent原理
 comments: true
 date: 2018-06-24 21:55:36
 tags:
-- javascript
 categories:
-- 每天一道基础题
+- 前端基础
+- BOM
 ---
 
 前端开发中，我们经常在请求路径中带各种参数，但细心的你会发现，在浏览器的路径栏看到的地址跟自己输入的参数不一样，浏览器将自己的输入转换成了一串字符。

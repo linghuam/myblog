@@ -1,12 +1,11 @@
 ---
-title: 每天一道基础题-CSS的background属性
+title: 前端基础-CSS的background属性
 comments: true
 date: 2018-05-25 01:25:44
 tags:
-- 每天一道基础题
-- css
 categories:
-- 每天一道基础题
+- 前端基础
+- CSS
 ---
 
 每一个 HTML 元素都默认有一个透明（background:transparent）的背景层。background 属性指定元素的背景色和背景图片，以及它们的大小、位置、重复性等。

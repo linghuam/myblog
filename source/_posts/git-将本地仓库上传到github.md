@@ -3,9 +3,9 @@ title: git-将本地仓库上传到github
 comments: true
 date: 2018-01-04 14:29:17
 tags:
-  - git
 categories:
-  - git
+- 开发工具
+- git
 ---
 
 在开发中，我们通过`git init`命令在本地创建了一个版本库，但是如何把它上传到 github 上共享呢。

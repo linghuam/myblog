@@ -37,22 +37,25 @@ $ hexo clean
 规则：大类不超过 6 类，级别不超过 2 层，大类优先级最高。
 
 * 前端基础
-  * HTML
-  * CSS
-  * JavaScript
+  * HTML/DOM
+  * CSS/CSSOM
+  * JavaScript/BOM
   * HTTP
+* 前端高级 
 * 可视化
   * 算法
   * 2D
   * 3D
   * GIS
+  * 计算机图形学
 * 数据结构与算法
 * 专题
   * 性能优化
   * 一周拾遗
+  * 解决方案
 * 开发工具
-  * GIT
-  * VSCODE
+  * git
+  * VSCode
 * 其他
 
 ## ISSUE

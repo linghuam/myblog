@@ -3,9 +3,8 @@ title: sublime常用插件
 comments: true
 date: 2018-01-04 22:37:28
 tags:
-  - sublime
 categories:
-  - tool
+- 开发工具
 ---
 
 sublime编辑器的常用快捷键和插件配置

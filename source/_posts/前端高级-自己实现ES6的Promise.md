@@ -1,11 +1,11 @@
 ---
-title: js-Promise
+title: 前端高级-自己实现ES6的Promise
 comments: true
 date: 2018-11-05 09:41:44
 tags:
-  - javascript
+— ES6
 categories:
-  - javascript
+- 前端高级
 ---
 
 js-Promise

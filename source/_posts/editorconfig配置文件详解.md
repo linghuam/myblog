@@ -3,9 +3,9 @@ title: editorconfig配置文件详解
 comments: true
 date: 2017-12-28 13:46:18
 tags:
-  - config
 categories:
-  - config
+- 开发工具
+- VSCode
 ---
 
 EditorConfig可以帮助开发者在不同的编辑器和IDE之间定义和维护一致的代码风格。

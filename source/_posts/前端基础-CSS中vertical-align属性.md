@@ -1,11 +1,11 @@
 ---
-title: 每天一道基础题-CSS中vertical-align属性
+title: 前端基础-CSS中vertical-align属性
 comments: true
 date: 2018-05-23 22:45:10
 tags:
-  - css
 categories:
-  - 每天一道基础题
+- 前端基础
+- CSS
 ---
 
 在刚刚接触 CSS 的同学中，经常使用到 vertical-align 来实现垂直对齐，但经常会困惑的是它并没有起到什么效果，下面就一起来探讨一下它到底是个什么鬼。
