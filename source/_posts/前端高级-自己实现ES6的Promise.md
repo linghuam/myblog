@@ -3,7 +3,6 @@ title: 前端高级-自己实现ES6的Promise
 comments: true
 date: 2018-11-05 09:41:44
 tags:
-— ES6
 categories:
 - 前端高级
 ---

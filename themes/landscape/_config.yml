@@ -12,7 +12,7 @@ fancybox: true
 recent_posts_limits: 5
 
 # Sidebar
-sidebar: right
+sidebar: left
 widgets:
 - category
 - tag
