@@ -91,6 +91,36 @@ esc + :wq
 - 光标调到末尾位置：Ctrl + E
 - 搜索命令：Ctrl + R
 
+## 配置环境变量
+
+1. /etc/profile （建议不修改这个文件 ）
+全局（公有）配置，不管是哪个用户，登录时都会读取该文件。
+
+2. /etc/bashrc （一般在这个文件中添加系统级环境变量）
+全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。
+
+3. ~/.bash_profile （一般在这个文件中添加用户级环境变量）
+每个用户都可使用该文件输入专用于自己使用的shell信息,当用户登录时,该文件仅仅执行一次!
+但是有时在.bash_profile 文件中的环境变量并没有起到作用
+这时可以查看使用的Mac OS X是什么样的Shell
+
+```bash
+➜  ~ echo $SHELL
+/bin/zsh
+```
+
+4. 当mac上安装了zsh后，修改环境变量就需要在~/.zshrc中修改，比如加入代理：
+
+```bash
+export http_prox=http://10.199.75.12:8080
+export https_proxy=http://10.199.75.12:8080
+```
+如果想要修改立即生效，需要执行
+
+```bash
+source ~/.zshrc
+```
+
 ## 参考
 
 - [MAC OS 小白入门视频](https://www.youtube.com/watch?v=pMmuk9bthUE)
