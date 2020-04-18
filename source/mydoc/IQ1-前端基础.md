@@ -16,6 +16,16 @@
 - apply：fn.apply(this,[param1,param2,param3]); 返回fn执行后的返回值
 - bind：fn.bind(this,arguments); 返回一个新的fn
 
+```js
+Function.prototype.bind = function(context) {
+  var slice = Array.prototype.slice;
+  var args = slice.apply(arguments, 1);
+  return function() {
+    return this.apply(context, slice(arguments, 0).concat(args));
+  }
+}
+```
+
 ## 画出一个正方形，并且自适应，列出的方法越多越好？
 
 ```html
