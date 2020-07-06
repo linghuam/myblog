@@ -41,7 +41,7 @@ $ hexo clean
   * CSS/CSSOM
   * JavaScript/BOM
   * HTTP
-* 前端高级 
+* 前端高级
 * 可视化
   * 算法
   * 2D
@@ -53,6 +53,7 @@ $ hexo clean
   * 性能优化
   * 一周拾遗
   * 解决方案
+  * Vue
 * 开发工具
   * git
   * VSCode
