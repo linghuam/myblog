@@ -156,3 +156,4 @@ JavaScript 计算，尤其是那些引发广泛视觉变化的计算，可能会
 ## 参考
 
 * [使用Chrome开发工具优化网站速度](https://developers.google.com/web/tools/chrome-devtools/speed/get-started)
+* [Chrome DevTools 面板全攻略](https://juejin.im/post/5f1542e16fb9a07e6f7b80fe?utm_source=gold_browser_extension)
