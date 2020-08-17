@@ -115,3 +115,5 @@ git reset commitid
 * [git-revert](https://git-scm.com/docs/git-revert)
 
 * [git-checkout](https://git-scm.com/docs/git-checkout)
+
+* [如何使用 Git 优雅的回滚](https://juejin.im/post/6854573212341616653?utm_source=gold_browser_extension)

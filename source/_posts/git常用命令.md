@@ -402,3 +402,7 @@ git cherry-pick
 git revert 提交hash // 将修改逆向运行一次，并重新提交
 
 arc diff
+
+## 其他
+
+* [Git push大文件失败解决](https://cloud.tencent.com/developer/article/1466149)
