@@ -75,24 +75,53 @@ git revert <commit>
 
 `git checkout file` 撤销对工作区中该文件的所有修改，它也不会移动 HEAD。
 
-## 远程回滚
+## 实际应用
 
-**方法一：** 可以在本地回滚后，用 `git push -f origin branch`强制回滚远程仓库，但不安全。
-
-## 不小心提交了大文件导致 git push 不了，怎么解决？
-
-github 限制单个文件提交体积不超过 100M。
+### 本地分支版本回退的方法
 
 ```bash
-# 1、先查找到提交大文件的记录
-git log
-# 2、依次撤销commit（包含过要删除的大文件的 commit 必须都给撤销了，要不然会报错）
-git reset commitid
-# 3、上面的撤销只是对 commit 命令的撤销，不会对你修改过的代码撤销的，他们还是在的。
-# 4、删除掉本地的大文件（或者修改 gitignore 忽略掉）
-# 5、重新进行提交
+git reflog
+git reset --hard [commitId]
+```
+### 自己的远程分支版本回退的方法
+
+```bash
+git reflog
+git reset --hard [commitId]
+git push -f
 ```
 
+### 公共远程分支版本回退的问题
+使用 `git reset` 需要提醒其他队友手动**用远程分支覆盖本地分支**，否则其他队友可能又会把之前的代码提交上去。
+
+```bash
+# 用远程分支覆盖本地分支
+git fetch --all
+git reset --hard origin/master (这里master要修改为对应的分支名)
+git pull
+```
+
+**`git revert`撤销某次提交**
+
+```bash
+git revert HEAD                     //撤销最近一次提交
+git revert HEAD~1                   //撤销上上次的提交，注意：数字从0开始
+git revert 0ffaacc                  //撤销0ffaacc这次提交
+```
+
+git revert 命令意思是撤销某次提交。它会产生一个新的提交，虽然代码回退了，但是版本依然是向前的，所以，当你用revert回退之后，所有人pull之后，他们的代码也自动的回退了。
+但是，要注意以下几点：
+
+> 1、revert 是撤销一次提交，所以后面的commit id是你需要回滚到的版本的前一次提交。
+> 2、使用revert HEAD是撤销最近的一次提交，如果你最近一次提交是用revert命令产生的，那么你再执行一次，就相当于撤销了上次的撤销操作，换句话说，你连续执行两次revert HEAD命令，就跟没执行是一样的。
+> 3、使用revert HEAD~1 表示撤销最近2次提交，这个数字是从0开始的，如果你之前撤销过产生了commi id，那么也会计算在内的。
+> 4、如果使用 revert 撤销的不是最近一次提交，那么一定会有代码冲突，需要你合并代码，合并代码只需要把当前的代码全部去掉，保留之前版本的代码就可以了。
+
+**怎样解决冲突？？**
+使用revert命令，如果不是撤销的最近一次提交，那么一定会有冲突。
+解决办法：一律使用**传入的更改**，即不使用当前的更改。
+
+git revert 命令的好处就是不会丢掉别人的提交，即使你撤销后覆盖了别人的提交，他更新代码后，可以在本地用 reset 向前回滚，找到自己的代码，然后拉一下分支，再回来合并上去就可以找回被你覆盖的提交了。
 
 ## 总结
 
@@ -101,6 +130,8 @@ git reset commitid
 * 回滚出错，可用 `git reflog` 恢复，但要费一番功夫。
 
 ## 参考：
+
+* [远程仓库版本回退方法](https://zhuanlan.zhihu.com/p/56843134)
 
 * [Git工具-重置揭密](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86)
 
