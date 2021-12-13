@@ -125,6 +125,22 @@ git log -p -2
 git log --stat
 ```
 
+## 修改提交信息
+
+```bash
+# 修改最后一次提交信息
+$ git commit --amend --no-edit
+
+# 修改前几次提交信息
+$ git rebase -i HEAD~3
+# HEAD~3 表示修改最近三次
+# 其次，将我们想修改的提交的命令由 “pick” 改为 “edit” 。修改完成之后，保存修改。
+# 依次使用 “git commit --amend” 和 “git rebase --continue” 修改
+
+# 远程仓库
+$ git push -f
+```
+
 ## 文件操作
 
 git 分区：工作区 -> 暂存区 -> 本地仓库 -> 远程仓库
