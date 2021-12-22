@@ -271,6 +271,28 @@ $ git remote rename old_name new_name
 ```
 
 ## 高级
+
+## 保持清洁的Git提交记录
+
+```bash
+# 法 1：修改最后一次提交
+# 既可以修改我们提交的 message，又可以修改我们提交的文件，最后还会替换最后一个 commit-id
+# 修改最后一次提交 message
+$ git commit --amend
+$ git commit --amend -m "feat: xxx"
+# 修改最后一次提交文件
+$ git add .
+$ git commit --amend --no-edit
+
+# 法 2：善用 git rebase -i（仅在代码未 push 到远程时使用）
+$ git rebase -i HEAD~n  # n表示最后几次提交
+
+# 法 3：合并远程分支时避免分叉
+# 如果用 merge 命令，就会多处一个 merge 节点，log history 中也会出现拐点，并不是线性的，所以这里我们可以在 feature 分支上使用 rebase 命令
+$ git pull origin master --rebase # 将远程分支 master 合并到当前分支
+```
+
+
 ## git add
 
 ## git checkout
