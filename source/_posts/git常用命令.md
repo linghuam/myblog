@@ -119,6 +119,8 @@ git status --short
 ```bash
 # 默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面
 git log
+# 带图形装饰的 log
+git log --graph --oneline --decorate
 # 一个常用的选项是 -p，用来显示每次提交的内容差异，也可以加上 -2 来仅显示最近两次提交
 git log -p -2
 # 看到每次提交的简略的统计信息
@@ -209,6 +211,10 @@ $ git merge branchName
 
 # 合并远程分支代码
 $ git pull origin branchName
+
+# 只有在同步远程仓库执行（相同分支同步可以使用rebase）；
+# 分支同步主线代码统一使用 git merge 而非 git rebase
+$ git pull -r
 
 # 合并部分提交
 # 如将 A 分支的某几个提交合并到 B 分支，而不是将整个 A 分支合并到 B
