@@ -119,6 +119,8 @@ git status --short
 ```bash
 # 默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面
 git log
+# 带图形装饰的 log
+git log --graph --oneline --decorate
 # 一个常用的选项是 -p，用来显示每次提交的内容差异，也可以加上 -2 来仅显示最近两次提交
 git log -p -2
 # 看到每次提交的简略的统计信息
